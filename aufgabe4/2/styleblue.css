@@ -1,0 +1,79 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+}
+.karte{
+    margin-top: 130px;
+    margin-left: 90px;
+}
+.ju{
+color: white;
+margin-top: -200px;
+margin-left: 130px;
+font-size: ;
+}
+.we{
+    color: white;
+    margin-left: 130px;
+}
+
+.stern{
+    margin-top: -180px;
+    margin-left: 130px;
+}
+
+.sterng{
+    position: absolute;
+    margin-top: -70px;
+    margin-left: 130px;
+    opacity: 0;}
+    
+.sterng:hover{
+    opacity: 100;}
+
+.stern2{
+    margin-top: -140px;
+    margin-left: 260px; 
+}
+
+.stern2g{
+    
+    margin-top: -70px;
+    margin-left: 260px;
+    opacity: 0;
+}
+    
+.stern2g:hover{
+    opacity: 100;}
+
+.stern3{
+    margin-top: 20px;
+    margin-left: 370px; 
+}
+
+.stern3g{
+    
+    margin-top: -70px;
+    margin-left: 370px;
+    opacity: 0;
+}
+    
+.stern3g:hover{
+    opacity: 100;
+}
+
+.stern4{
+    margin-top: -120px;
+    margin-left: 520px; 
+}
+
+.stern4g{
+    
+    margin-top: -70px;
+    margin-left: 520px;
+    opacity: 0;
+}
+    
+.stern4g:hover{
+    opacity: 100;
+}
