@@ -1,0 +1,29 @@
+body{
+    background-image: url(../station6/images/bg.png);
+}
+
+.bild{
+    margin-top: 100px;
+    margin-left: 90px;
+}
+
+.heading{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -340px;
+    margin-left: 130px;
+}
+
+.spalte{
+    width: 500px;
+    column-width: 200px;
+    margin-left: 130px;
+    color: white;
+}
+
+.spalte2{
+    width: 500px;
+    columns: 3;
+    color: white;
+    margin-left: 130px;
+}
