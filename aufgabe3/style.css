@@ -1,0 +1,113 @@
+.mydiv{
+    color: rgb(133, 20, 5);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#kreis{
+   
+    display: block;
+    background-color: rgb(150, 32, 2);
+    width: 800px;
+    height: 800px;
+    top: 800px;
+    left: 800px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    margin: -330px 0px 0px 0px;
+z-index: 10;}
+
+.text{
+    color: white;
+   position: absolute;
+    font-size: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 350px;
+    margin-left: 100px;
+z-index: 1;}
+
+.text2 {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 540px;
+    margin-left: 150px;
+
+}
+
+.img{
+    
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 380px;
+    
+}
+
+.text3 {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 520px;
+    margin-left: 440px;
+}
+
+.text4 {
+    color: rgb(59, 56, 56);
+    position: absolute;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+.text5{
+    color: white;
+   position: absolute;
+    font-size: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 350px;
+    margin-left: 200px;
+z-index: 1;}
+
+ul{
+
+        position: fixed;
+        top: -16px;
+        right: 30px;
+        width: 320px;
+        margin-left: 1200px;
+        background-color: black;
+        overflow: hidden;
+        list-style-type: style type;
+        border-radius: 5px;
+        
+
+}
+
+li{
+    float:right;
+}
+li a{display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;}
+
+    li a:hover:not(.seite) {
+        background-color: #535353;
+      }
+
+      .seite {
+        background-color: #B63514;
+    }
+
+body{
+    background-image: url(../aufgabe3/bg.png);
+}
