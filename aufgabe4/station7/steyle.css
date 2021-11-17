@@ -11,6 +11,7 @@ body{
     position: absolute;
     margin-top: -110px;
     margin-left: 410px;
+    opacity: 0.6;
 }
 
 .mistle{
