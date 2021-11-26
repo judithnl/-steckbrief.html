@@ -1,6 +1,6 @@
 var eu8 = 1028;
 var eu18 = 1235.5;
-var eu = "pa";
+var eu = "Europa";
 var na8 = 6600.4;
 var na18 = 6035.6;
 var na = "Nordamerika";
@@ -21,6 +21,9 @@ var gesamt18 = eu18 + na18 + sa18 + af18 + as18 + aus18;
 var el;
 (function (el) {
     window.addEventListener("load", function () {
+        document.querySelector(".europa").addEventListener("click", function () {
+            what(eu, eu18, eu8);
+        });
         document.querySelector(".africa").addEventListener("click", function () {
             what(af, af18, af8);
         });
