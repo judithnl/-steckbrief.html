@@ -84,3 +84,8 @@ body{
     border-style: none;
     margin: 2px;
 }
+
+.play{
+    margin: auto;
+    width: 50%;
+}

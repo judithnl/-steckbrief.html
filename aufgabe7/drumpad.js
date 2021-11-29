@@ -12,5 +12,19 @@ window.addEventListener("load", function playSample() {
     document.querySelector(".p4").addEventListener("click", function () { ton[3].play(); });
     document.querySelector(".g1").addEventListener("click", function () { ton[6].play(); });
     document.querySelector(".g2").addEventListener("click", function () { ton[7].play(); });
+    document.querySelector(".play").addEventListener("click", function () {
+        setInterval(function () {
+            ton[5].play();
+        }, 300);
+        setInterval(function () {
+            ton[1].play();
+        }, 600);
+        setInterval(function () {
+            ton[2].play();
+        }, 630);
+        setInterval(function () {
+            ton[7].play();
+        }, 6000);
+    });
 });
 //# sourceMappingURL=drumpad.js.map
