@@ -21,7 +21,7 @@ var gesamt18 = eu18 + na18 + sa18 + af18 + as18 + aus18;
 var el;
 (function (el) {
     window.addEventListener("load", function () {
-        document.querySelector(".europa").addEventListener("click", function () {
+        document.querySelector(".europe").addEventListener("click", function () {
             what(eu, eu18, eu8);
         });
         document.querySelector(".africa").addEventListener("click", function () {
