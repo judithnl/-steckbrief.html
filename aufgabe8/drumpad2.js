@@ -2,15 +2,22 @@ var ton = [new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"),
     new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"),
     new Audio("./assets/kick.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3"),
     new Audio("./assets/snare.mp3")];
-document.querySelector(".b1").addEventListener("click", function () { playSample(ton[4]); });
-document.querySelector(".b2").addEventListener("click", function () { playSample(ton[5]); });
-document.querySelector(".b3").addEventListener("click", function () { playSample(ton[8]); });
-document.querySelector(".p1").addEventListener("click", function () { playSample(ton[0]); });
-document.querySelector(".p2").addEventListener("click", function () { playSample(ton[1]); });
-document.querySelector(".p3").addEventListener("click", function () { playSample(ton[2]); });
-document.querySelector(".p4").addEventListener("click", function () { playSample(ton[3]); });
-document.querySelector(".g1").addEventListener("click", function () { playSample(ton[6]); });
-document.querySelector(".g2").addEventListener("click", function () { playSample(ton[7]); });
+ton: HTMLAudioElement;
+function play2(AudioFile) {
+    var ton = new Audio(AudioFile);
+    ton.play();
+}
+;
+var play = document.querySelector("#play");
+document.querySelector(".b1").addEventListener("click", function () { play2(ton[4]); });
+document.querySelector(".b2").addEventListener("click", function () { play2(ton[5]); });
+document.querySelector(".b3").addEventListener("click", function () { play2(ton[8]); });
+document.querySelector(".p1").addEventListener("click", function () { play2(ton[0]); });
+document.querySelector(".p2").addEventListener("click", function () { play2(ton[1]); });
+document.querySelector(".p3").addEventListener("click", function () { play2(ton[2]); });
+document.querySelector(".p4").addEventListener("click", function () { play2(ton[3]); });
+document.querySelector(".g1").addEventListener("click", function () { play2(ton[6]); });
+document.querySelector(".g2").addEventListener("click", function () { play2(ton[7]); });
 document.querySelector("#play").addEventListener("click", function () { playBeat(); });
 document.querySelector("#delete").addEventListener("click", function () { deleteall(); });
 document.querySelector("#shuffle").addEventListener("click", function () { random(); });
@@ -30,11 +37,6 @@ document.querySelector(".play").addEventListener("click", function () {
 });
 var key = 0;
 var beat = new Audio();
-var play = document.querySelector("#play");
-function playSample(AudioFile) {
-    var sound = new Audio(AudioFile);
-    sound.play();
-}
 function playBeat() {
     if (play.getAttribute("class") == "fas fa-stop") {
         play.setAttribute("class", "fas fa-play");
