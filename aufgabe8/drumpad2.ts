@@ -47,37 +47,20 @@ var beat: HTMLAudioElement = new Audio();
 
 
 function playBeat(): void {
-  if (play.getAttribute("class") == "fas fa-stop") {
-      play.setAttribute("class", "fas fa-play");
-      
-  }
-  else {
+  if (play.getAttribute("class") == "fas fa-stop"){
+      play.setAttribute("class", "fas fa-play");};
+  else(play.getAttribute("class") == "fas fa-play"); {
       play.setAttribute("class", "fas fa-stop");
-  
-      if (play.getAttribute("class") == "fas fa-play") {ton.push(); }
-  }
-}
-
-function randomnum(max: number): number {
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max + 1));
-}
+      if (play.getAttribute("class") == "fas fa-play") {ton.push();};
+  };
+};
 
 function random(): void {
     
-    for (var i: number = 0; i <= ton.length; i++) {
-      
-        
-    }
-}
+    for (var i: number = 0; i <= ton.length; i++);
 
 function deleteall(): void {
   ton.length = 0;
-}
+};
 
-
-      
-
-
-
-
+};

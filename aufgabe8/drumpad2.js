@@ -41,22 +41,25 @@ function playBeat() {
     if (play.getAttribute("class") == "fas fa-stop") {
         play.setAttribute("class", "fas fa-play");
     }
-    else {
+    ;
+    (play.getAttribute("class") == "fas fa-play");
+    {
         play.setAttribute("class", "fas fa-stop");
         if (play.getAttribute("class") == "fas fa-play") {
             ton.push();
         }
+        ;
     }
+    ;
 }
-function randomnum(max) {
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max + 1));
-}
+;
 function random() {
-    for (var i = 0; i <= ton.length; i++) {
+    for (var i = 0; i <= ton.length; i++)
+        ;
+    function deleteall() {
+        ton.length = 0;
     }
+    ;
 }
-function deleteall() {
-    ton.length = 0;
-}
+;
 //# sourceMappingURL=drumpad2.js.map
