@@ -1,18 +1,44 @@
-var ton:HTMLAudioElement[]=[new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"), 
+ var ton:HTMLAudioElement[]=[new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"), 
 new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"), 
 new Audio("./assets/kick.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3"), 
-new Audio("./assets/snare.mp3")];
+new Audio("./assets/snare.mp3")]; 
 
-ton:HTMLAudioElement
+//playfunktion
+function play2(ton:HTMLAudioElement):void
 
-function play2(AudioFile):void{var ton:HTMLAudioElement=new Audio(AudioFile);
-ton.play();};
+{
 
-var play: HTMLAudioElement = document.querySelector("#play");
+ton.play();
+}
+
+var playsound:boolean=false;
+
+//funktion playbutton
+function playbutton(){
+playsound=true;
+document.querySelector("#play").setAttribute("class","fas fa-play");
+}
+
+//funktion stopbutton
+function stopbutton(){
+    playsound=false;
+    document.querySelector("#stop").setAttribute("class","fas fa-stop")
+}
+
+//funktion deletebutton
+function deletebutton(){
+    playsound=false
+    document.querySelector("#delete").setAttribute("class", "fas fa-trash-alt")
+    ton=[]
+}
+
+//funktion shuffle
+function shuffle(){
+    
+}
 
 
-
-
+//soundboard
 document.querySelector(".b1").addEventListener("click", function (): void { play2(ton[4]);  });
 document.querySelector(".b2").addEventListener("click", function (): void { play2(ton[5]); });
 document.querySelector(".b3").addEventListener("click", function (): void { play2(ton[8]);  });
@@ -23,9 +49,10 @@ document.querySelector(".p4").addEventListener("click", function (): void { play
 document.querySelector(".g1").addEventListener("click", function (): void { play2(ton[6]);  });
 document.querySelector(".g2").addEventListener("click", function (): void { play2(ton[7]); });
 
-document.querySelector("#play").addEventListener("click", function (): void {playBeat(); });
-document.querySelector("#delete").addEventListener("click", function (): void {deleteall(); });
-document.querySelector("#shuffle").addEventListener("click", function (): void {random(); });
+//buttons
+document.querySelector("#play").addEventListener("click", function (): void {playbutton(); });
+document.querySelector("#delete").addEventListener("click", function (): void {deletebutton(); });
+document.querySelector("#shuffle").addEventListener("click", function (): void {shuffle(); });
 
 document.querySelector(".play").addEventListener("click", function(){
     setInterval(function(){
@@ -42,25 +69,3 @@ document.querySelector(".play").addEventListener("click", function(){
     }, 6000);
 });
  
-var key: number = 0;
-var beat: HTMLAudioElement = new Audio();
-
-
-function playBeat(): void {
-  if (play.getAttribute("class") == "fas fa-stop"){
-      play.setAttribute("class", "fas fa-play");};
-  else(play.getAttribute("class") == "fas fa-play"); {
-      play.setAttribute("class", "fas fa-stop");
-      if (play.getAttribute("class") == "fas fa-play") {ton.push();};
-  };
-};
-
-function random(): void {
-    
-    for (var i: number = 0; i <= ton.length; i++);
-
-function deleteall(): void {
-  ton.length = 0;
-};
-
-};
