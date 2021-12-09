@@ -1,5 +1,4 @@
 window.addEventListener('load', function () {
-    ;
     //audios
     var ton = [new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"),
         new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"),
@@ -12,7 +11,6 @@ window.addEventListener('load', function () {
         ton2.play();
     }
     ;
-    var playsound = true;
     var pausesound = false;
     var index = 0;
     var beatplaying = false;
@@ -46,7 +44,7 @@ window.addEventListener('load', function () {
     //funktion stopbutton
     //funktion deletebutton
     function deletebutton() {
-        sound.length = 0;
+        ton.length = 0;
     }
     //funktion shuffle
     //soundboard

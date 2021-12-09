@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-   ;
+   
 
 
 //audios
@@ -16,7 +16,7 @@ function play2(ton2:HTMLAudioElement):void{
 
 ton2.play();
 };
-var playsound=true;
+
 var pausesound:boolean=false;
 var index:number=0;
 var beatplaying:boolean=false;
@@ -56,7 +56,7 @@ function stopBeat(): void {
 
 //funktion deletebutton
 function deletebutton(){
-    sound.length=0;   
+    ton.length=0;   
     
 }
 
