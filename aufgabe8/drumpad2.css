@@ -93,7 +93,7 @@ body{
 #play{
     position: absolute;
     color: violet;
-    height: 200px;
+    font-size: 2cm;
     margin-left: -280px;
     margin-top: 170px;
 }
@@ -103,12 +103,22 @@ body{
     color: purple;
     margin-left: -250px;
     margin-top: 170px;
+    font-size: 2cm;
 }
 
 #delete{
     position: absolute;
     color: lightseagreen;
-    margin-left: -230px;
+    margin-left: -150px;
     margin-top: 170px;
+    font-size: 2cm;
 
+}
+
+#shuffle{
+position: absolute;
+color: rgb(99, 99, 180);
+margin-left: -400px;
+margin-top: 170px;
+font-size: 2cm;
 }

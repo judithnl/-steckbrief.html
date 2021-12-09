@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@types/jquery": "^3.5.9",
+    "@types/node": "^16.11.12"
+  }
+}
