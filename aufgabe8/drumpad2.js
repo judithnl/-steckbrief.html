@@ -58,11 +58,11 @@ window.addEventListener('load', function () {
     document.querySelector(".g1").addEventListener("click", function () { play2(ton[6]); });
     document.querySelector(".g2").addEventListener("click", function () { play2(ton[7]); });
     //buttons
-    document.querySelector("#play").addEventListener("load", function () {
+    document.querySelector("#play").addEventListener("click", function () {
         playstop();
     });
-    document.querySelector("#delete").addEventListener("load", function () { deletebutton(); });
-    document.querySelector("#shuffle").addEventListener("load", function () {
+    document.querySelector("#delete").addEventListener("click", function () { deletebutton(); });
+    document.querySelector("#shuffle").addEventListener("click", function () {
         ton.length = 0;
         setInterval(function () {
             play2(sound[index]);

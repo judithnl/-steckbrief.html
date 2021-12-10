@@ -79,10 +79,10 @@ document.querySelector(".g1").addEventListener("click", function (): void { play
 document.querySelector(".g2").addEventListener("click", function (): void { play2(ton[7]); });
 
 //buttons
-document.querySelector("#play").addEventListener("load", function (): void {playstop();
+document.querySelector("#play").addEventListener("click", function (): void {playstop();
 });
-document.querySelector("#delete").addEventListener("load", function ():void{deletebutton();});
-document.querySelector("#shuffle").addEventListener("load", function(): void{
+document.querySelector("#delete").addEventListener("click", function ():void{deletebutton();});
+document.querySelector("#shuffle").addEventListener("click", function(): void{
 
     ton.length = 0;
     setInterval(function(): void{
