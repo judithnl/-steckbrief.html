@@ -17,23 +17,15 @@ window.addEventListener('load', function () {
     var index = 0;
     var beatplaying = false;
     //funktion playbutton
-    var beatInterval;
     function playbutton() {
-        if (beatplaying = true) {
-            document.querySelector("#play").setAttribute("class", "");
-            document.querySelector("#play").setAttribute("class", "fas fa-stop");
-            beatInterval = setInterval(play2, 500);
-            pausesound = true;
-        }
-        else {
-            document.querySelector("#play").setAttribute("class", "");
-            document.querySelector("#play").setAttribute("class", " fas fa-play");
-            stopBeat();
-            pausesound = false;
-        }
-    }
-    function stopBeat() {
-        clearInterval(beatInterval);
+        document.querySelector("#play").addEventListener("click", function () {
+            document.querySelector("#play").classList.add("isHidden");
+            document.querySelector("#stop").classList.remove("isHidden");
+        });
+        document.querySelector("#stop").addEventListener("click", function () {
+            document.querySelector("#stop").classList.add("isHidden");
+            document.querySelector("#play").classList.remove("isHidden");
+        });
     }
     //soundboard
     document.querySelector(".b1").addEventListener("click", function () { play2(ton[4]); });
@@ -48,6 +40,25 @@ window.addEventListener('load', function () {
     //buttons
     document.querySelector("#play").addEventListener("click", function () {
         playbutton();
+    });
+    document.querySelector("#play").addEventListener("click", function play2() {
+        var ton3 = setInterval(function () {
+            sound[index].play();
+            index++;
+            if (index > 2)
+                index = 0;
+        }, 500);
+        document.querySelector("#stop").addEventListener("click", function () {
+            clearInterval(ton3);
+        });
+    });
+    document.querySelector("#play").addEventListener("click", function () {
+        document.querySelector("#play").classList.add("isHidden");
+        document.querySelector("#stop").classList.remove("isHidden");
+    });
+    document.querySelector("#stop").addEventListener("click", function () {
+        document.querySelector("#stop").classList.add("isHidden");
+        document.querySelector("#play").classList.remove("isHidden");
     });
     document.querySelector("#delete").addEventListener("click", function () { sound.length = 0; });
     document.querySelector("#shuffle").addEventListener("click", function () {

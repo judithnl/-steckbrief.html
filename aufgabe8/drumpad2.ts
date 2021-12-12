@@ -22,26 +22,20 @@ var index:number=0;
 var beatplaying:boolean=false;
 
 //funktion playbutton
-var beatInterval:number;
 
 function playbutton(): void {
     
-    if (beatplaying=true) {
-        document.querySelector("#play").setAttribute("class", "");
-        document.querySelector("#play").setAttribute("class", "fas fa-stop");
-        beatInterval = setInterval(play2, 500);
-        pausesound = true;
-    } else {
-        document.querySelector("#play").setAttribute("class", "");
-        document.querySelector("#play").setAttribute("class", " fas fa-play");
-        stopBeat(); 
-        pausesound = false;        
-    }
+    document.querySelector("#play").addEventListener("click", function(): void{
+        document.querySelector("#play").classList.add("isHidden");
+        document.querySelector("#stop").classList.remove("isHidden");
+      });
+    
+      document.querySelector("#stop").addEventListener("click", function(): void{
+        document.querySelector("#stop").classList.add("isHidden");
+        document.querySelector("#play").classList.remove("isHidden");
+      });
+  
 }
-
-function stopBeat(): void {
-    clearInterval(beatInterval);}
-
 
 //soundboard
 document.querySelector(".b1").addEventListener("click", function ():void{ play2(ton[4]);  });
@@ -57,6 +51,33 @@ document.querySelector(".g2").addEventListener("click", function (): void { play
 //buttons
 document.querySelector("#play").addEventListener("click", function (): void {playbutton();
 });
+   document.querySelector("#play").addEventListener("click", function play2(): void{ 
+
+    var ton3 = setInterval(function(): void{ 
+      
+      sound[index].play(); 
+      index++;
+
+      if (index > 2)
+        index = 0;
+      }, 500);
+
+      document.querySelector("#stop").addEventListener("click", function(): void{
+        clearInterval(ton3);
+      }) ;
+    })
+
+
+    document.querySelector("#play").addEventListener("click", function(): void{
+      document.querySelector("#play").classList.add("isHidden");
+      document.querySelector("#stop").classList.remove("isHidden");
+    });
+  
+    document.querySelector("#stop").addEventListener("click", function(): void{
+      document.querySelector("#stop").classList.add("isHidden");
+      document.querySelector("#play").classList.remove("isHidden");
+    });
+
 document.querySelector("#delete").addEventListener("click", function ():void{sound.length=0;});
 document.querySelector("#shuffle").addEventListener("click", function(): void{
 
