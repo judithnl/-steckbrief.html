@@ -27,9 +27,11 @@ window.addEventListener('load', function () {
     document.querySelector(".g2").addEventListener("click", function () { play2(ton[7]); });
     //buttons
     document.querySelector("#play").addEventListener("click", function () {
-        document.querySelector("#play").classList.add("isHidden");
-        document.querySelector("#stop").classList.remove("isHidden");
+        beatplaying = true;
+        document.querySelector("#stop").classList.add("isHidden");
+        document.querySelector("#play").classList.remove("isHidden");
         document.querySelector("#stop").addEventListener("click", function () {
+            beatplaying = false;
             ton.length = 0;
             document.querySelector("#stop").classList.add("isHidden");
             document.querySelector("#play").classList.remove("isHidden");

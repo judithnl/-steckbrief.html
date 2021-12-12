@@ -34,15 +34,17 @@ document.querySelector(".g2").addEventListener("click", function (): void { play
 
 //buttons
 document.querySelector("#play").addEventListener("click", function (): void {
-    document.querySelector("#play").classList.add("isHidden");
-    document.querySelector("#stop").classList.remove("isHidden");
-      
+  beatplaying=true;
+        document.querySelector("#stop").classList.add("isHidden");
+  document.querySelector("#play").classList.remove("isHidden");
     
 
       document.querySelector("#stop").addEventListener("click", function(): void{
+        beatplaying=false;
         ton.length=0;
-        document.querySelector("#stop").classList.add("isHidden");
+           document.querySelector("#stop").classList.add("isHidden");
         document.querySelector("#play").classList.remove("isHidden");
+      
       }) ;
       if(beatplaying=true){
         setInterval(function(){
@@ -57,11 +59,13 @@ document.querySelector("#play").addEventListener("click", function (): void {
         setInterval(function(){
             ton[7].play();
         }, 6000);
+
       
       }
         else{
           beatplaying=false;
     ton.length=0;
+ 
         }
     })
 
