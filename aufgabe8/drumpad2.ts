@@ -1,19 +1,19 @@
 window.addEventListener('load', () => {
    
-
-
 //audios
 var ton:HTMLAudioElement[]=[new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"), 
 new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"), 
 new Audio("./assets/kick.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3"), 
 new Audio("./assets/snare.mp3")];
 
-var sound:HTMLAudioElement[]=[new Audio ("./assets/kick.mp3"), new Audio ("./assets/snare.mp3"), new Audio ("./assets/hihat.mp3")];
-var sound2:HTMLAudioElement[]=[new Audio ("./assets/kick.mp3"), new Audio ("./assets/snare.mp3"), new Audio ("./assets/hihat.mp3"), new Audio ("./assets/A.mp3"), new Audio ("./assets/C.mp3"), new Audio ("./assets/F.mp3"), new Audio ("./assets/G.mp3"), new Audio ("./assets/laugh-1.mp3"), new Audio ("./assets/laugh-2.mp3")];
+var sound:HTMLAudioElement[]=[new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"), 
+new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"), 
+new Audio("./assets/kick.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3"), 
+new Audio("./assets/snare.mp3")];
+
 
 //playfunktion
 function play2(ton2:HTMLAudioElement):void{
-
 ton2.play();
 };
 
@@ -26,7 +26,7 @@ var beatInterval:number;
 
 function playbutton(): void {
     
-    if (!pausesound) {
+    if (beatplaying=true) {
         document.querySelector("#play").setAttribute("class", "");
         document.querySelector("#play").setAttribute("class", "fas fa-stop");
         beatInterval = setInterval(play2, 500);
@@ -37,34 +37,10 @@ function playbutton(): void {
         stopBeat(); 
         pausesound = false;        
     }
-  
-}
-function playstop():void{
-    if (beatplaying=true){
-    document.querySelector("#play").setAttribute("class","fas fa-stop");}
-    else{
-        document.querySelector("#play").setAttribute("class","fas fa-play");
-    }
 }
 
 function stopBeat(): void {
     clearInterval(beatInterval);}
-
-//funktion stopbutton
-
-
-
-//funktion deletebutton
-function deletebutton(){
-    ton.length=0;   
-    
-}
-
-//funktion shuffle
-
-
-
-
 
 
 //soundboard
@@ -79,9 +55,9 @@ document.querySelector(".g1").addEventListener("click", function (): void { play
 document.querySelector(".g2").addEventListener("click", function (): void { play2(ton[7]); });
 
 //buttons
-document.querySelector("#play").addEventListener("click", function (): void {playstop();
+document.querySelector("#play").addEventListener("click", function (): void {playbutton();
 });
-document.querySelector("#delete").addEventListener("click", function ():void{deletebutton();});
+document.querySelector("#delete").addEventListener("click", function ():void{sound.length=0;});
 document.querySelector("#shuffle").addEventListener("click", function(): void{
 
     ton.length = 0;

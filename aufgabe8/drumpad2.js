@@ -4,8 +4,10 @@ window.addEventListener('load', function () {
         new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"),
         new Audio("./assets/kick.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3"),
         new Audio("./assets/snare.mp3")];
-    var sound = [new Audio("./assets/kick.mp3"), new Audio("./assets/snare.mp3"), new Audio("./assets/hihat.mp3")];
-    var sound2 = [new Audio("./assets/kick.mp3"), new Audio("./assets/snare.mp3"), new Audio("./assets/hihat.mp3"), new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"), new Audio("./assets/F.mp3"), new Audio("./assets/G.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3")];
+    var sound = [new Audio("./assets/A.mp3"), new Audio("./assets/C.mp3"),
+        new Audio("./assets/F.mp3"), new Audio('./assets/G.mp3'), new Audio("./assets/hihat.mp3"),
+        new Audio("./assets/kick.mp3"), new Audio("./assets/laugh-1.mp3"), new Audio("./assets/laugh-2.mp3"),
+        new Audio("./assets/snare.mp3")];
     //playfunktion
     function play2(ton2) {
         ton2.play();
@@ -17,7 +19,7 @@ window.addEventListener('load', function () {
     //funktion playbutton
     var beatInterval;
     function playbutton() {
-        if (!pausesound) {
+        if (beatplaying = true) {
             document.querySelector("#play").setAttribute("class", "");
             document.querySelector("#play").setAttribute("class", "fas fa-stop");
             beatInterval = setInterval(play2, 500);
@@ -30,23 +32,9 @@ window.addEventListener('load', function () {
             pausesound = false;
         }
     }
-    function playstop() {
-        if (beatplaying = true) {
-            document.querySelector("#play").setAttribute("class", "fas fa-stop");
-        }
-        else {
-            document.querySelector("#play").setAttribute("class", "fas fa-play");
-        }
-    }
     function stopBeat() {
         clearInterval(beatInterval);
     }
-    //funktion stopbutton
-    //funktion deletebutton
-    function deletebutton() {
-        ton.length = 0;
-    }
-    //funktion shuffle
     //soundboard
     document.querySelector(".b1").addEventListener("click", function () { play2(ton[4]); });
     document.querySelector(".b2").addEventListener("click", function () { play2(ton[5]); });
@@ -59,9 +47,9 @@ window.addEventListener('load', function () {
     document.querySelector(".g2").addEventListener("click", function () { play2(ton[7]); });
     //buttons
     document.querySelector("#play").addEventListener("click", function () {
-        playstop();
+        playbutton();
     });
-    document.querySelector("#delete").addEventListener("click", function () { deletebutton(); });
+    document.querySelector("#delete").addEventListener("click", function () { sound.length = 0; });
     document.querySelector("#shuffle").addEventListener("click", function () {
         ton.length = 0;
         setInterval(function () {

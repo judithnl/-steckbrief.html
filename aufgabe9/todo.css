@@ -1,3 +1,32 @@
-.add{
+body{
+    background-color: rgb(155, 89, 218);
+  margin: auto;
+    
+}
+
+.input{
+    height: 40px;
+    width: 300px;
+   background-color: rgb(152, 181, 236);
+   color: darkblue;
+
+}
+
+h1{
+    font-family: fantasy;
+    font-size: 60px;
+    color: rgb(82, 13, 82);
+   
+
+}
+
+h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: rgb(60, 52, 117);
+
+}
+
+#trash{
     
 }
