@@ -13,20 +13,8 @@ window.addEventListener('load', function () {
         ton2.play();
     }
     ;
-    var pausesound = false;
     var index = 0;
     var beatplaying = false;
-    //funktion playbutton
-    function playbutton() {
-        document.querySelector("#play").addEventListener("click", function () {
-            document.querySelector("#play").classList.add("isHidden");
-            document.querySelector("#stop").classList.remove("isHidden");
-        });
-        document.querySelector("#stop").addEventListener("click", function () {
-            document.querySelector("#stop").classList.add("isHidden");
-            document.querySelector("#play").classList.remove("isHidden");
-        });
-    }
     //soundboard
     document.querySelector(".b1").addEventListener("click", function () { play2(ton[4]); });
     document.querySelector(".b2").addEventListener("click", function () { play2(ton[5]); });
@@ -39,26 +27,31 @@ window.addEventListener('load', function () {
     document.querySelector(".g2").addEventListener("click", function () { play2(ton[7]); });
     //buttons
     document.querySelector("#play").addEventListener("click", function () {
-        playbutton();
-    });
-    document.querySelector("#play").addEventListener("click", function play2() {
-        var ton3 = setInterval(function () {
-            sound[index].play();
-            index++;
-            if (index > 2)
-                index = 0;
-        }, 500);
-        document.querySelector("#stop").addEventListener("click", function () {
-            clearInterval(ton3);
-        });
-    });
-    document.querySelector("#play").addEventListener("click", function () {
         document.querySelector("#play").classList.add("isHidden");
         document.querySelector("#stop").classList.remove("isHidden");
-    });
-    document.querySelector("#stop").addEventListener("click", function () {
-        document.querySelector("#stop").classList.add("isHidden");
-        document.querySelector("#play").classList.remove("isHidden");
+        document.querySelector("#stop").addEventListener("click", function () {
+            ton.length = 0;
+            document.querySelector("#stop").classList.add("isHidden");
+            document.querySelector("#play").classList.remove("isHidden");
+        });
+        if (beatplaying = true) {
+            setInterval(function () {
+                ton[5].play();
+            }, 300);
+            setInterval(function () {
+                ton[1].play();
+            }, 600);
+            setInterval(function () {
+                ton[2].play();
+            }, 630);
+            setInterval(function () {
+                ton[7].play();
+            }, 6000);
+        }
+        else {
+            beatplaying = false;
+            ton.length = 0;
+        }
     });
     document.querySelector("#delete").addEventListener("click", function () { sound.length = 0; });
     document.querySelector("#shuffle").addEventListener("click", function () {
@@ -67,21 +60,6 @@ window.addEventListener('load', function () {
             play2(sound[index]);
             index = Math.floor(Math.random() * 9);
         }, 500);
-    });
-    document.querySelector("#play").addEventListener("click", function () {
-        beatplaying = true;
-        setInterval(function () {
-            ton[5].play();
-        }, 300);
-        setInterval(function () {
-            ton[1].play();
-        }, 600);
-        setInterval(function () {
-            ton[2].play();
-        }, 630);
-        setInterval(function () {
-            ton[7].play();
-        }, 6000);
     });
 });
 //# sourceMappingURL=drumpad2.js.map
