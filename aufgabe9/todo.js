@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
     var index = 0;
-    var text = document.createElement("p");
-    var input = document.querySelector("#input");
+    var text = document.createElement("li");
+    var input = document.createElement("input");
     var add = document.querySelector("#add");
     add.addEventListener("click", function () {
         input.innerHTML = input.value;
@@ -18,15 +18,15 @@ window.addEventListener("load", function () {
             document.querySelector("h2").innerHTML = index + " in total";
         });
         var notdone = document.createElement("cb");
-        add.appendChild(notdone);
+        text.appendChild(notdone);
         notdone.classList.add("far", "fa-circle");
         notdone.addEventListener("click", function () {
             notdone.classList.add("#");
             done.classList.remove("#");
         });
         var done = document.createElement("cb");
-        add.appendChild(done);
-        done.classList.add("far", "fa-check-circle", "#");
+        text.appendChild(done);
+        text.classList.add("far", "fa-check-circle", "#");
         done.addEventListener("click", function () {
             done.classList.add("#");
             done.classList.remove("#");

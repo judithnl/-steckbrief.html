@@ -2,8 +2,8 @@
 window.addEventListener("load",function(){
 let index:number=0;
 
-let text=document.createElement("p");
-let input:HTMLInputElement=document.querySelector("#input");
+let text:HTMLLIElement=document.createElement("li");
+let input:HTMLInputElement=document.createElement("input");
 let add=document.querySelector("#add");
 
 
@@ -30,7 +30,7 @@ add.addEventListener("click", function () {
     });
    
     var notdone = document.createElement("cb");
-    add.appendChild(notdone);
+    text.appendChild(notdone);
     notdone.classList.add("far", "fa-circle");
    
 
@@ -40,8 +40,8 @@ add.addEventListener("click", function () {
     });
    
     var done = document.createElement("cb");
-   add.appendChild(done);
-    done.classList.add("far", "fa-check-circle", "#");
+   text.appendChild(done);
+    text.classList.add("far", "fa-check-circle", "#");
    
 
     done.addEventListener("click", function () {

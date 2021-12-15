@@ -8,21 +8,19 @@
     
     <script src="https://kit.fontawesome.com/fffd29478b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./todo.css">
-  <script src="./todo.js"></script>
+  <script src="./todov2.js"></script>
 </head>
 <body>
-  
-    <h1>
-        ToDo App
-    </h1>
-    <h2>
-        0 in total
-    </h2>
-
-<div class="app">
-    <input type="text" id="input" placeholder="Add another task">
-    <button id="add" class="fas fa-plus-circle"></button>
-
-</div>
+    <header>
+        <h1>TODO-LIST</h1>
+        <h2>0 in total</h2>
+    </header>
+    <form>
+        <input type="text" class="eingabe" placeholder="Add another task">
+        <button class=" abgabe" type="submit">
+            <i class="fas fa-plus"></i>
+        </button>
+    </form>
+    <ul class="liste"></ul>
 </body>
 </html>

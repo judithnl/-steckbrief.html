@@ -1,39 +1,98 @@
-body{
-    background-color: rgb(155, 89, 218);
-  width: 50%;
-  margin: auto;
-    
+body {
+    background-color: rgb(189, 129, 201);
+    position: absolute;
+    color: rgb(68, 36, 104);
+    font-family:fantasy;
+    width: 400px;
+    left: 200px;
 }
 
-#input{
-    height: 40px;
-    width: 300px;
-   background-color: rgb(152, 181, 236);
-   color: darkblue;
-
-}
-
-h1{
-    font-family: fantasy;
-    font-size: 80px;
-    color: rgb(82, 13, 82);
-   
-
-}
-
-h2{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
-    color: rgb(60, 52, 117);
+h1 {
+    position: absolute;
+    font-size: 50px;
+    left: 150px;
+    top: 50px;
     font-weight: lighter;
-
+    color: rgb(77, 32, 83);
 }
 
-#add{
-    height: 50px;
-    background-color: purple;
-}
-
-.app{
+h2 {
+    position: absolute;
+    font-size: 22px;
+    font-weight: lighter;
+    color: rebeccapurple;
+    left: 200px;
+    top: 0px;
     
 }
+
+input {
+    background-color: rgb(165, 77, 187);
+    position: relative;
+    font-size: 35px;
+    color: #555;
+    top: 200px;
+    left: 100px;
+}
+
+.input {
+    background-color: rgb(167, 97, 173);
+    margin-top: 200px;
+    position: relative;
+    margin-left: 60px;
+    font-size: 35px;
+    border: none;
+    color: rgb(69, 10, 92);
+   
+}
+
+ul, li {
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+fas fa-plus {
+    position: relative;
+    font-size: 35px;
+    color: rgb(67, 43, 83);
+    background-color: rgb(210, 130, 226);
+    left: 400px;
+    top: 100px;
+  
+}
+
+.check {
+    position: absolute;
+    font-size: 20px;
+    border-radius: 150px;
+    border-width: 2px;
+    border-color: #aaa;
+    color: white;
+    background-color: white;
+    opacity: 100%;
+}
+
+.trash {
+    position: absolute;
+    top: 25px;
+    left: 750px;
+    font-size: 35px;
+    border: none;
+    color: rgb(69, 18, 73);
+    background-color: white;
+}
+
+
+.checked {
+    color: #333;
+}
+input:focus{
+    outline: none;
+}
+
+
+.todo{
+
+}
+
