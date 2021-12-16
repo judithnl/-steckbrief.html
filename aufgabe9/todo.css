@@ -46,11 +46,7 @@ input {
    
 }
 
-ul, li {
-    text-decoration: none;
-    list-style-type: none;
 
-}
 
 fas fa-plus {
     position: relative;
@@ -84,12 +80,11 @@ fas fa-plus {
 }
 
 
-.checked {
+.abgehakt {
     color: #333;
 }
-input:focus{
-    outline: none;
-}
+
+
 
 
 .todo{
