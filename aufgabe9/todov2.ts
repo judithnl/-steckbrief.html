@@ -4,7 +4,7 @@ let index:number=0;
 
 
 //funktion add task
-function hinzufügen(){
+function hinzufuegen(){
 //variables
     const todo:HTMLDivElement=document.createElement("div");
     const listenelement:HTMLLIElement=document.createElement("li");
@@ -19,14 +19,13 @@ todo.classList.add("todo");
 listenelement.classList.add("text");
 trashbutton.classList.add("trash");
 done.classList.add("check");
-plus.classList.add("fas fa-plus");
+plus.classList.add("add");
 liste.classList.add("liste");
 
 
 
 //appendchild
 
-inputtodo.appendChild(liste);
 liste.appendChild(listenelement);
 listenelement.appendChild(done);
 listenelement.appendChild(trashbutton);
@@ -64,15 +63,15 @@ function checkdelete(){
 }
 
 //funktionen callen
- document.querySelector(".fas fa-plus").addEventListener("click", function(){
-            hinzufügen();
+ document.querySelector(".fas").addEventListener("click", function(){
+            hinzufuegen();
         })
 document.querySelector(".liste").addEventListener("click",function(){
     checkdelete();
 })
 
 document.addEventListener("keydown", function(event:KeyboardEvent){
-    if(event.keyCode==13){hinzufügen()}
+    if(event.keyCode==13){hinzufuegen()}
 })
 })
 

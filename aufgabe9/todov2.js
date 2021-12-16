@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
     var index = 0;
     //funktion add task
-    function hinzufügen() {
+    function hinzufuegen() {
         //variables
         var todo = document.createElement("div");
         var listenelement = document.createElement("li");
@@ -15,10 +15,9 @@ window.addEventListener("load", function () {
         listenelement.classList.add("text");
         trashbutton.classList.add("trash");
         done.classList.add("check");
-        plus.classList.add("fas fa-plus");
+        plus.classList.add("add");
         liste.classList.add("liste");
         //appendchild
-        inputtodo.appendChild(liste);
         liste.appendChild(listenelement);
         listenelement.appendChild(done);
         listenelement.appendChild(trashbutton);
@@ -42,15 +41,15 @@ window.addEventListener("load", function () {
         }
     }
     //funktionen callen
-    document.querySelector(".fas fa-plus").addEventListener("click", function () {
-        hinzufügen();
+    document.querySelector(".fas").addEventListener("click", function () {
+        hinzufuegen();
     });
     document.querySelector(".liste").addEventListener("click", function () {
         checkdelete();
     });
     document.addEventListener("keydown", function (event) {
         if (event.keyCode == 13) {
-            hinzufügen();
+            hinzufuegen();
         }
     });
 });
