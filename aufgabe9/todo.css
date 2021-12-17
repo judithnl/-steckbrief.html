@@ -27,7 +27,7 @@ h2 {
 }
 
 input {
-    background-color: rgb(165, 77, 187);
+    background-color: rgb(69, 196, 228);
     position: relative;
     font-size: 35px;
     color: black;
@@ -35,16 +35,7 @@ input {
     left: 100px;
 }
 
-.input {
-    background-color: rgb(95, 176, 207);
-    position: relative;
-    font-size: 35px;
-    color: black;
-    top: 200px;
-    left: 100px;
-    
-   
-}
+
 
 
 
