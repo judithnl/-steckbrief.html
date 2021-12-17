@@ -18,7 +18,7 @@ function hinzufuegen(){
 todo.classList.add("todo");
 listenelement.classList.add("text");
 trashbutton.classList.add("trash");
-done.classList.add("check");
+done.classList.add("fa-check");
 plus.classList.add("add");
 liste.classList.add("liste");
 inputtodo.classList.add("input");
@@ -30,14 +30,19 @@ inputtodo.classList.add("input");
 liste.appendChild(listenelement);
 listenelement.appendChild(done);
 listenelement.appendChild(trashbutton);
-listenelement.appendChild(done);
+
 
 
 listenelement.innerHTML = inputtodo.value;
+inputtodo.value="";
 
 trashbutton.setAttribute("class", "fas fa-trash-alt")
+done.setAttribute("class","fa fa-check");
+
 
 document.querySelector(".liste").appendChild(liste);
+document.querySelector(".liste").appendChild(trashbutton);
+document.querySelector(".liste").appendChild(done);
 
 
 
@@ -45,35 +50,23 @@ document.querySelector(".liste").appendChild(liste);
 index++;
 document.querySelector("h2").innerHTML=index+ " in total.";
 
+//checkdelete
+trashbutton.addEventListener("click", function (): void { 
+    liste.removeChild(listenelement); index--; });
+done.addEventListener("click", function (): void {
+    if (done.style.opacity != "100%") {
+        done.style.opacity = "100%"; }});
 
 }
 
 
-//funktion abhaken und löschen
-function checkdelete(){
-    let click:Element=event.target as Element;
 
-    if (click.classList[0]=="trash"){
-        click.parentElement.remove();
-        index--;
-       document.querySelector("h2").innerHTML=index+" in total.";
-    }
-
-    if(click.classList[0]=="check"){
-        click.classList.add("abgehakt");
-    }
-
-    
-   
-}
 
 //funktionen callen
  document.querySelector(".fas").addEventListener("click", function(){
             hinzufuegen();
         })
-document.querySelector(".liste").addEventListener("click",function(){
-    checkdelete();
-})
+
 
 document.addEventListener("keydown", function(event:KeyboardEvent){
     if(event.keyCode==13){hinzufuegen()}

@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
         todo.classList.add("todo");
         listenelement.classList.add("text");
         trashbutton.classList.add("trash");
-        done.classList.add("check");
+        done.classList.add("fa-check");
         plus.classList.add("add");
         liste.classList.add("liste");
         inputtodo.classList.add("input");
@@ -22,32 +22,30 @@ window.addEventListener("load", function () {
         liste.appendChild(listenelement);
         listenelement.appendChild(done);
         listenelement.appendChild(trashbutton);
-        listenelement.appendChild(done);
         listenelement.innerHTML = inputtodo.value;
+        inputtodo.value = "";
         trashbutton.setAttribute("class", "fas fa-trash-alt");
+        done.setAttribute("class", "fa fa-check");
         document.querySelector(".liste").appendChild(liste);
+        document.querySelector(".liste").appendChild(trashbutton);
+        document.querySelector(".liste").appendChild(done);
         //intotal
         index++;
         document.querySelector("h2").innerHTML = index + " in total.";
-    }
-    //funktion abhaken und löschen
-    function checkdelete() {
-        var click = event.target;
-        if (click.classList[0] == "trash") {
-            click.parentElement.remove();
+        //checkdelete
+        trashbutton.addEventListener("click", function () {
+            liste.removeChild(listenelement);
             index--;
-            document.querySelector("h2").innerHTML = index + " in total.";
-        }
-        if (click.classList[0] == "check") {
-            click.classList.add("abgehakt");
-        }
+        });
+        done.addEventListener("click", function () {
+            if (done.style.opacity != "100%") {
+                done.style.opacity = "100%";
+            }
+        });
     }
     //funktionen callen
     document.querySelector(".fas").addEventListener("click", function () {
         hinzufuegen();
-    });
-    document.querySelector(".liste").addEventListener("click", function () {
-        checkdelete();
     });
     document.addEventListener("keydown", function (event) {
         if (event.keyCode == 13) {
