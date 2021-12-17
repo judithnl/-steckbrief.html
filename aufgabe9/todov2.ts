@@ -8,7 +8,7 @@ function hinzufuegen(){
 //variables
     const todo:HTMLDivElement=document.createElement("div");
     const listenelement:HTMLLIElement=document.createElement("li");
-    const inputtodo:HTMLInputElement=document.createElement("input");
+    const inputtodo:HTMLInputElement=document.querySelector("input");
     const trashbutton:HTMLButtonElement=document.createElement("button");
     const done:HTMLButtonElement=document.createElement("button");
     const plus:HTMLButtonElement=document.createElement("button");
@@ -28,7 +28,6 @@ inputtodo.classList.add("input");
 //appendchild
 
 liste.appendChild(listenelement);
-listenelement.appendChild(inputtodo);
 listenelement.appendChild(done);
 listenelement.appendChild(trashbutton);
 listenelement.appendChild(done);
@@ -36,9 +35,10 @@ listenelement.appendChild(done);
 
 listenelement.innerHTML = inputtodo.value;
 
+trashbutton.setAttribute("class", "fas fa-trash-alt")
 
+document.querySelector(".liste").appendChild(liste);
 
-document.querySelector(".liste").appendChild(listenelement);
 
 
 //intotal

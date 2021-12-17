@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
         //variables
         var todo = document.createElement("div");
         var listenelement = document.createElement("li");
-        var inputtodo = document.createElement("input");
+        var inputtodo = document.querySelector("input");
         var trashbutton = document.createElement("button");
         var done = document.createElement("button");
         var plus = document.createElement("button");
@@ -20,12 +20,12 @@ window.addEventListener("load", function () {
         inputtodo.classList.add("input");
         //appendchild
         liste.appendChild(listenelement);
-        listenelement.appendChild(inputtodo);
         listenelement.appendChild(done);
         listenelement.appendChild(trashbutton);
         listenelement.appendChild(done);
         listenelement.innerHTML = inputtodo.value;
-        document.querySelector(".liste").appendChild(listenelement);
+        trashbutton.setAttribute("class", "fas fa-trash-alt");
+        document.querySelector(".liste").appendChild(liste);
         //intotal
         index++;
         document.querySelector("h2").innerHTML = index + " in total.";

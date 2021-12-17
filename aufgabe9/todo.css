@@ -36,28 +36,25 @@ input {
 }
 
 .input {
-    background-color:violet;
-    width: 100px;
-    height: 50px;
-    margin-top: 200px;
+    background-color: rgb(165, 77, 187);
     position: relative;
-    margin-left: 60px;
     font-size: 35px;
-    border: none;
-    color: rgb(0, 0, 0);
+    color: black;
+    top: 200px;
+    left: 100px;
     
    
 }
 
 
 
-.fas{
+.fa-plus{
     position: relative;
     font-size: 35px;
     color: rgb(67, 43, 83);
     background-color: rgb(210, 130, 226);
-    left: 400px;
-    top: 100px;
+    left: 500px;
+    top: 160px;
   
 }
 
@@ -92,5 +89,15 @@ input {
 
 .todo{
 
+}
+
+.liste{
+    position: relative;
+    top: 80px;
+    left: 30px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgb(106, 42, 165);
 }
 
