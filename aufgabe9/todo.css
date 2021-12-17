@@ -62,17 +62,21 @@ input {
     opacity: 0%;    
     position: absolute;
     top: 87px;
-    left: 470px;
+    left: 475px;
     font-size: 20px;
     color: rgb(131, 61, 103);
+    background-color: transparent;
+    border: none;
    
 }
 
 .fa-square{
     position: absolute;
-    font-size: 40px;
+    font-size: 35px;
     left: 470px;
     top: 80px;
+    background-color: transparent;
+    border: none;
 }
 
 .trash {
@@ -87,12 +91,13 @@ input {
 
 .fa-trash-alt{
     position: absolute;
-    top: ;
-    left: 30px;
+    top: 80px;
+    left: 400px;
     font-size: 35px;
     border: none;
     color: rgb(69, 18, 73);
-    background-color: rgb(88, 191, 209);   
+    background-color: transparent;
+     
 }
 
 .abgehakt {

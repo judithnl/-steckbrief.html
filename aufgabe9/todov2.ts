@@ -13,7 +13,7 @@ function hinzufuegen(){
     const done:HTMLButtonElement=document.createElement("button");
     const plus:HTMLButtonElement=document.createElement("button");
     const liste=document.createElement("ul");
-    const viereck=document.createElement("div");
+    const viereck=document.createElement("button");
 
 //classlists
 todo.classList.add("todo");
@@ -63,7 +63,7 @@ trashbutton.addEventListener("click", function (): void {
     viereck.style.opacity="0%";
     index--;
     document.querySelector("h2").innerHTML=index+ " in total."; });
-done.addEventListener("click", function (): void {
+viereck.addEventListener("click", function (): void {
     if (done.style.opacity != "100%") {
         done.style.opacity = "100%"; }});
 

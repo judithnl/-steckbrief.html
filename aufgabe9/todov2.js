@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
         var done = document.createElement("button");
         var plus = document.createElement("button");
         var liste = document.createElement("ul");
-        var viereck = document.createElement("div");
+        var viereck = document.createElement("button");
         //classlists
         todo.classList.add("todo");
         listenelement.classList.add("text");
@@ -45,7 +45,7 @@ window.addEventListener("load", function () {
             index--;
             document.querySelector("h2").innerHTML = index + " in total.";
         });
-        done.addEventListener("click", function () {
+        viereck.addEventListener("click", function () {
             if (done.style.opacity != "100%") {
                 done.style.opacity = "100%";
             }
