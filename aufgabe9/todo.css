@@ -1,7 +1,7 @@
 body {
     background-color: rgb(189, 129, 201);
     position: absolute;
-    color: rgb(68, 36, 104);
+    color: rgb(10, 10, 10);
     font-family:fantasy;
     width: 400px;
     left: 200px;
@@ -30,25 +30,28 @@ input {
     background-color: rgb(165, 77, 187);
     position: relative;
     font-size: 35px;
-    color: #555;
+    color: black;
     top: 200px;
     left: 100px;
 }
 
 .input {
-    background-color: rgb(167, 97, 173);
+    background-color:violet;
+    width: 100px;
+    height: 50px;
     margin-top: 200px;
     position: relative;
     margin-left: 60px;
     font-size: 35px;
     border: none;
-    color: rgb(69, 10, 92);
+    color: rgb(0, 0, 0);
+    
    
 }
 
 
 
-fas fa-plus {
+.fas{
     position: relative;
     font-size: 35px;
     color: rgb(67, 43, 83);

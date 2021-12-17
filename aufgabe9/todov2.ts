@@ -12,7 +12,7 @@ function hinzufuegen(){
     const trashbutton:HTMLButtonElement=document.createElement("button");
     const done:HTMLButtonElement=document.createElement("button");
     const plus:HTMLButtonElement=document.createElement("button");
-    const liste=document.querySelector("ul");
+    const liste=document.createElement("ul");
 
 //classlists
 todo.classList.add("todo");
@@ -21,20 +21,25 @@ trashbutton.classList.add("trash");
 done.classList.add("check");
 plus.classList.add("add");
 liste.classList.add("liste");
+inputtodo.classList.add("input");
 
 
 
 //appendchild
 
 liste.appendChild(listenelement);
+listenelement.appendChild(inputtodo);
 listenelement.appendChild(done);
 listenelement.appendChild(trashbutton);
 listenelement.appendChild(done);
 
 
-listenelement.innerHTML = inputtodo.value; 
+listenelement.innerHTML = inputtodo.value;
 
-document.querySelector(".liste").appendChild(liste);
+
+
+document.querySelector(".liste").appendChild(listenelement);
+
 
 //intotal
 index++;

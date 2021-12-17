@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
         var trashbutton = document.createElement("button");
         var done = document.createElement("button");
         var plus = document.createElement("button");
-        var liste = document.querySelector("ul");
+        var liste = document.createElement("ul");
         //classlists
         todo.classList.add("todo");
         listenelement.classList.add("text");
@@ -17,13 +17,15 @@ window.addEventListener("load", function () {
         done.classList.add("check");
         plus.classList.add("add");
         liste.classList.add("liste");
+        inputtodo.classList.add("input");
         //appendchild
         liste.appendChild(listenelement);
+        listenelement.appendChild(inputtodo);
         listenelement.appendChild(done);
         listenelement.appendChild(trashbutton);
         listenelement.appendChild(done);
         listenelement.innerHTML = inputtodo.value;
-        document.querySelector(".liste").appendChild(liste);
+        document.querySelector(".liste").appendChild(listenelement);
         //intotal
         index++;
         document.querySelector("h2").innerHTML = index + " in total.";
