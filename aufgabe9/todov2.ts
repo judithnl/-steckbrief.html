@@ -13,6 +13,7 @@ function hinzufuegen(){
     const done:HTMLButtonElement=document.createElement("button");
     const plus:HTMLButtonElement=document.createElement("button");
     const liste=document.createElement("ul");
+    const viereck=document.createElement("div");
 
 //classlists
 todo.classList.add("todo");
@@ -22,6 +23,8 @@ done.classList.add("fa-check");
 plus.classList.add("add");
 liste.classList.add("liste");
 inputtodo.classList.add("input");
+viereck.classList.add("viereck");
+
 
 
 
@@ -30,6 +33,7 @@ inputtodo.classList.add("input");
 liste.appendChild(listenelement);
 listenelement.appendChild(done);
 listenelement.appendChild(trashbutton);
+listenelement.appendChild(viereck);
 
 
 
@@ -38,11 +42,13 @@ inputtodo.value="";
 
 trashbutton.setAttribute("class", "fas fa-trash-alt")
 done.setAttribute("class","fa fa-check");
+viereck.setAttribute("class", "far fa-square")
 
 
 document.querySelector(".liste").appendChild(liste);
 document.querySelector(".liste").appendChild(trashbutton);
 document.querySelector(".liste").appendChild(done);
+document.querySelector(".liste").appendChild(viereck);
 
 
 
@@ -52,7 +58,11 @@ document.querySelector("h2").innerHTML=index+ " in total.";
 
 //checkdelete
 trashbutton.addEventListener("click", function (): void { 
-    liste.removeChild(listenelement); index--; });
+    liste.removeChild(listenelement);
+    trashbutton.style.opacity="0%";
+    viereck.style.opacity="0%";
+    index--;
+    document.querySelector("h2").innerHTML=index+ " in total."; });
 done.addEventListener("click", function (): void {
     if (done.style.opacity != "100%") {
         done.style.opacity = "100%"; }});

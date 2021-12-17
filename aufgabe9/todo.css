@@ -61,17 +61,18 @@ input {
 .fa-check{
     opacity: 0%;    
     position: absolute;
+    top: 87px;
+    left: 470px;
     font-size: 20px;
-    border-radius: 150px;
-    border-width: 2px;
-    border-color: #aaa;
     color: rgb(131, 61, 103);
-    background-color: white;
+   
 }
 
-.check {
-color: rgb(92, 47, 81);
-    opacity: 100%;
+.fa-square{
+    position: absolute;
+    font-size: 40px;
+    left: 470px;
+    top: 80px;
 }
 
 .trash {
@@ -84,6 +85,15 @@ color: rgb(92, 47, 81);
     background-color: rgb(88, 191, 209);
 }
 
+.fa-trash-alt{
+    position: absolute;
+    top: ;
+    left: 30px;
+    font-size: 35px;
+    border: none;
+    color: rgb(69, 18, 73);
+    background-color: rgb(88, 191, 209);   
+}
 
 .abgehakt {
     color: #333;
