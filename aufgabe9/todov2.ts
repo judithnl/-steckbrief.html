@@ -61,12 +61,19 @@ trashbutton.addEventListener("click", function (): void {
     liste.removeChild(listenelement);
     trashbutton.style.opacity="0%";
     viereck.style.opacity="0%";
+    done.style.opacity="0%";
     index--;
     document.querySelector("h2").innerHTML=index+ " in total."; });
 viereck.addEventListener("click", function (): void {
     if (done.style.opacity != "100%") {
-        done.style.opacity = "100%"; }});
+        done.style.opacity = "100%"; }
 
+  });
+/*viereck.addEventListener("click", function(){
+    if(done.style.opacity="100%"){
+        done.style.opacity="0%";
+    }
+})*/
 }
 
 
