@@ -6,7 +6,7 @@ let index:number=0;
 //funktion add task
 function hinzufuegen(){
 //variables
-    const todo:HTMLDivElement=document.createElement("div");
+
     const listenelement:HTMLLIElement=document.createElement("li");
     const inputtodo:HTMLInputElement=document.querySelector("input");
     const trashbutton:HTMLButtonElement=document.createElement("button");
@@ -16,7 +16,7 @@ function hinzufuegen(){
     const viereck=document.createElement("button");
 
 //classlists
-todo.classList.add("todo");
+
 listenelement.classList.add("text");
 trashbutton.classList.add("trash");
 done.classList.add("fa-check");

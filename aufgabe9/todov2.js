@@ -3,7 +3,6 @@ window.addEventListener("load", function () {
     //funktion add task
     function hinzufuegen() {
         //variables
-        var todo = document.createElement("div");
         var listenelement = document.createElement("li");
         var inputtodo = document.querySelector("input");
         var trashbutton = document.createElement("button");
@@ -12,7 +11,6 @@ window.addEventListener("load", function () {
         var liste = document.createElement("ul");
         var viereck = document.createElement("button");
         //classlists
-        todo.classList.add("todo");
         listenelement.classList.add("text");
         trashbutton.classList.add("trash");
         done.classList.add("fa-check");
