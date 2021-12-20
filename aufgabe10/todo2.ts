@@ -3,9 +3,8 @@ window.addEventListener("load", function(){
 
     //variables
 let index:number=0;
-var alle: number = 0;
-var offen: number = 0;
-var erledigt: number = 0;
+let open: number = 0;
+let erledigt: number = 0;
     const listenelement:HTMLLIElement=document.createElement("li");
     const inputtodo:HTMLInputElement=document.querySelector("input");
     const trashbutton:HTMLButtonElement=document.createElement("button");
@@ -51,7 +50,10 @@ document.querySelector(".liste").appendChild(viereck);
 
 //intotal
 index++;
+open++;
 document.querySelector("h2").innerHTML=index+ " in total.";
+document.querySelector(".open").innerHTML=open+ " still open.";
+document.querySelector(".erledigt").innerHTML=erledigt+" already done."
 
 //checkdelete
 trashbutton.addEventListener("click", function (): void { 
@@ -60,10 +62,12 @@ trashbutton.addEventListener("click", function (): void {
     viereck.style.opacity="0%";
     done.style.opacity="0%";
     index--;
+    open--;
     document.querySelector("h2").innerHTML=index+ " in total."; });
 viereck.addEventListener("click", function (): void {
     if (done.style.opacity != "100%") {
-        done.style.opacity = "100%"; }
+        done.style.opacity = "100%"; 
+    open--; erledigt++;}
 
   });
 /*viereck.addEventListener("click", function(){

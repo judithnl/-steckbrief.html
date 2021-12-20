@@ -1,8 +1,7 @@
 window.addEventListener("load", function () {
     //variables
     var index = 0;
-    var alle = 0;
-    var offen = 0;
+    var open = 0;
     var erledigt = 0;
     var listenelement = document.createElement("li");
     var inputtodo = document.querySelector("input");
@@ -37,7 +36,10 @@ window.addEventListener("load", function () {
         document.querySelector(".liste").appendChild(viereck);
         //intotal
         index++;
+        open++;
         document.querySelector("h2").innerHTML = index + " in total.";
+        document.querySelector(".open").innerHTML = open + " still open.";
+        document.querySelector(".erledigt").innerHTML = erledigt + " already done.";
         //checkdelete
         trashbutton.addEventListener("click", function () {
             liste.removeChild(listenelement);
@@ -45,11 +47,14 @@ window.addEventListener("load", function () {
             viereck.style.opacity = "0%";
             done.style.opacity = "0%";
             index--;
+            open--;
             document.querySelector("h2").innerHTML = index + " in total.";
         });
         viereck.addEventListener("click", function () {
             if (done.style.opacity != "100%") {
                 done.style.opacity = "100%";
+                open--;
+                erledigt++;
             }
         });
         /*viereck.addEventListener("click", function(){
